@@ -42,7 +42,6 @@ DEBUG = True # 배포시에 바꾸기
 
 ALLOWED_HOSTS = [] # ['*']
 
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -90,6 +89,8 @@ WSGI_APPLICATION = "HSU_StudentCouncil.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
+AUTH_USER_MODEL = 'accounts.UserProfile'
+
 DATABASES = get_secret("DATABASES")
 
 
@@ -135,7 +136,6 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # MEDIAFILES_DIRS = [
 #     BASE_DIR / 'media'
 # ]
-
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
