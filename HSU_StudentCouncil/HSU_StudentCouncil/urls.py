@@ -24,6 +24,7 @@ urlpatterns = [
     path("admin/", admin.site.urls), 
     # 계정 및 USER 관련은 accounts/urls.py에서 처리
     path('accounts/', include('accounts.urls')),
+    
     # 메인페이지 index.html
     path('', views.home, name='home'),
 
